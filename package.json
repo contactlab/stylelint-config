@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@stylelint/postcss-css-in-js": "^0.38.0",
-    "@types/node": "^16.18.12",
+    "@types/node": "^18.13.0",
     "eslint": "^8.34.0",
     "eslint-config-contactlab": "^9.0.0",
     "eslint-config-prettier": "^8.6.0",
