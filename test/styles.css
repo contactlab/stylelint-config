@@ -1,0 +1,83 @@
+@custom-media --from-xsmall (min-width: 30em);
+@custom-media --from-small (min-width: 48em);
+@custom-media --from-medium (min-width: 60em);
+@custom-media --from-large (min-width: 80em);
+@custom-media --from-xlarge (min-width: 100em);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+custom-element {
+  margin-bottom: 2.4rem;
+}
+
+input[type='text'] {
+  --custom-property: #fff;
+  display: block;
+  color: #444;
+  background-color: linear-gradient(
+    var(--custom-property, #eee),
+    rgba(0 0 0 0.8)
+  );
+}
+
+@media (--from-medium) {
+  input[type='text'] {
+    border-color: transparent;
+    background-color: transparent;
+  }
+}
+
+.foo,
+.bar:not(:first-child) {
+  top: calc(calc(1em * 2) / 3);
+  padding: 1em;
+}
+
+.baz {
+  font-family: Inconsolata, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
+    monospace;
+}
+
+.buz {
+  font-family: custom-font-serif, Didot, 'Bodoni MT', Georgia, serif;
+}
+
+/* Single-line comment */
+@media (orientation: portrait), projection and (color) {
+  .foo + .bar {
+    font-family: custom-font-sans-serif, 'Lucida Grande', 'Segoe UI', Arial,
+      sans-serif;
+    filter: brightness();
+  }
+}
+
+/*
+ * Multi-line comment
+ */
+@media screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .fav {
+    height: 8rem;
+    margin: 8rem;
+    margin-bottom: 16rem;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent,
+      #fff 24px,
+      rgb(255 255 255 / 0.8) 48px
+    );
+    box-shadow: 0 1px 1px #444, 0 1px 0 #fff, 2px 2px 1px 1px #eee inset;
+  }
+}
+
+.biz {
+  /* The empty block is not allowed. Put a comment instead  */
+}
+
+/* The BEM pattern is valid (https://github.com/getbem) */
+.block__element--modifier {
+  content: '';
+}

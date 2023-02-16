@@ -1,0 +1,7 @@
+node_modules
+dist
+test
+index.js
+prettier.js
+styled.js
+*.d.ts

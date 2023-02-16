@@ -1,0 +1,10 @@
+.history
+*.log*
+/dist
+/node_modules
+/tmp
+index.js
+prettier.js
+styled.js
+*.d.ts
+*.tgz
