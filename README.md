@@ -70,7 +70,7 @@ You can extend the configuration or overrides some rules. More details about the
 1. install the [Stylelint plugin](https://marketplace.visualstudio.com/items?itemname=stylelint.vscode-stylelint);
 2. add the following code to your `.vscode/settings.json`:
 
-   ```json
+   ```jsonc
    {
      "css.validate": false,
      "scss.validate": false,
