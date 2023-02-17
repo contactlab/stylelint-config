@@ -24,9 +24,7 @@ yarn add -D @contactlab/stylelint-config
 
 and then add it as extension in your Stylelint configuration file:
 
-```jsonc
-// for example in your .stylelintrc.js or package.json
-
+```json
 {
   "extends": ["@contactlab/stylelint-config"]
 }
@@ -34,7 +32,7 @@ and then add it as extension in your Stylelint configuration file:
 
 In order to have support for **CSS-in-JS** tools, use the `styled` config as extension:
 
-```jsonc
+```json
 {
   "extends": ["@contactlab/stylelint-config/styled"]
 }
@@ -55,13 +53,13 @@ Stylelint Config sorts the CSS property declarations by grouping them in the fol
 
 You can extend the configuration or overrides some rules. More details about the loading mechanism are available in [the Stylelint documentation](https://stylelint.io/user-guide/configuration/#extends).
 
-```jsonc
+```json
 {
   "extends": "@contactlab/stylelint-config",
-  "rules": [
-    "selector-id-pattern": null
+  "rules": {
+    "selector-id-pattern": null,
     "selector-class-pattern": null
-  ]
+  }
 }
 ```
 
@@ -71,14 +69,18 @@ You can extend the configuration or overrides some rules. More details about the
 
 1. install the [Stylelint plugin](https://marketplace.visualstudio.com/items?itemname=stylelint.vscode-stylelint);
 2. add the following code to your `.vscode/settings.json`:
-   ```jsonc
-   "css.validate": false,
-   "scss.validate": false,
-   "editor.codeActionsOnSave": {
-     "source.fixAll.stylelint": true
-   },
-   "stylelint.validate": ["css"] // Add the type of file you want to validate (e.g. ["css", "scss", "typescript", "typescriptreact"])
+
+   ```json
+   {
+     "css.validate": false,
+     "scss.validate": false,
+     "editor.codeActionsOnSave": {
+       "source.fixAll.stylelint": true
+     },
+     "stylelint.validate": ["css"] // Add the type of file you want to validate (e.g. ["css", "scss", "typescript", "typescriptreact"])
+   }
    ```
+
 3. highlight the CSS-in-JS syntax with the [Styled Components plugin](https://marketplace.visualstudio.com/items?itemname=styled-components.vscode-styled-components) (**optional**)
 
 ## References
