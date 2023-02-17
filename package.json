@@ -46,7 +46,6 @@
     "stylelint-order": "^6.0.2"
   },
   "devDependencies": {
-    "@types/node": "^16.18.12",
     "eslint": "^8.34.0",
     "eslint-config-contactlab": "^9.0.0",
     "eslint-config-prettier": "^8.6.0",
