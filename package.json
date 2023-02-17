@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Contactlab Stylelint modular configuration - inspired by @giotramu/stylelint-config",
   "keywords": [
-    "stylelint",
-    "contactlab",
     "config",
-    "stylelintconfig"
+    "contactlab",
+    "stylelint",
+    "stylelint-config"
   ],
   "author": "Contactlab",
   "license": "Apache-2.0",
