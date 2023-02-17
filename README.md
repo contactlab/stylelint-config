@@ -6,7 +6,7 @@ Contactlab [Stylelint](https://stylelint.io) extensible and sharable configurati
 
 Inspired by [`@giotramu/stylelint-config`](https://github.com/giotramu/stylelint-config) package.
 
-It supports CSS or PostCSS syntax and CSS-in-JS solutions, like [Styled Components](https://github.com/styled-components/styled-components), [Emotion.js](https://github.com/emotion-js/emotion) or [Linaria](https://github.com/callstack/linaria). It works great in conjunction with Prettier.
+It supports CSS or PostCSS syntax and CSS-in-JS solutions, like [Styled Components](https://github.com/styled-components/styled-components), [Emotion.js](https://github.com/emotion-js/emotion) or [Linaria](https://github.com/callstack/linaria).
 
 > **Warning!** This package needs Stylelint [v15](https://stylelint.io/migration-guide/to-15) (or higher) which has deprecated some rules, removed Nodejs v12 support and made Prettier integration smoother.
 
