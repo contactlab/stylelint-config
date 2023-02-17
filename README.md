@@ -8,6 +8,8 @@ Inspired by [`@giotramu/stylelint-config`](https://github.com/giotramu/stylelint
 
 It supports CSS or PostCSS syntax and CSS-in-JS solutions, like [Styled Components](https://github.com/styled-components/styled-components), [Emotion.js](https://github.com/emotion-js/emotion) or [Linaria](https://github.com/callstack/linaria). It works great in conjunction with Prettier.
 
+> **Warning!** This package needs Stylelint [v15](https://stylelint.io/migration-guide/to-15) (or higher) which has deprecated some rules, removed Nodejs v12 support and made Prettier integration smoother.
+
 ## Usage
 
 Install the configuration as a npm package:
@@ -30,41 +32,11 @@ and then add it as extension in your Stylelint configuration file:
 }
 ```
 
-**Note:** The base config includes the code formatting-related rules. It is strongly recommended to use Prettier for this purpose. More details are available [here](#prettier).
-
-### CSS-in-JS Syntax
-
-In order to have support for CSS-in-JS tools, install the related Stylelint package:
-
-```sh
-npm i -D @stylelint/postcss-css-in-js
-
-# --- OR ---
-
-yarn add -D @stylelint/postcss-css-in-js
-```
-
-and then add the `styled` config as extension:
+In order to have support for **CSS-in-JS** tools, use the `styled` config as extension:
 
 ```jsonc
 {
-  "extends": [
-    "@contactlab/stylelint-config",
-    "@contactlab/stylelint-config/styled"
-  ]
-}
-```
-
-### Prettier
-
-This _optional_ config disables the Stylelint code formatting rules and lets [Prettier](https://prettier.io/) handle them:
-
-```jsonc
-{
-  "extends": [
-    "@contactlab/stylelint-config",
-    "@contactlab/stylelint-config/prettier" // This has to be the last one
-  ]
+  "extends": ["@contactlab/stylelint-config/styled"]
 }
 ```
 
@@ -111,6 +83,6 @@ You can extend the configuration or overrides some rules. More details about the
 
 ## References
 
+- [postcss-styled-syntax](https://github.com/hudochenkov/postcss-styled-syntax)
 - [stylelint-declaration-block-no-ignored-properties](https://github.com/kristerkari/stylelint-declaration-block-no-ignored-properties)
 - [stylelint-order](https://github.com/hudochenkov/stylelint-order)
-- [stylelint-scss](https://github.com/kristerkari/stylelint-scss)

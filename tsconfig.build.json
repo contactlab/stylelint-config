@@ -4,5 +4,5 @@
     "noEmit": false,
     "declaration": true
   },
-  "include": ["index.ts", "prettier.ts", "styled.ts"]
+  "include": ["index.ts", "styled.ts"]
 }

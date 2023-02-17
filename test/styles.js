@@ -10,10 +10,12 @@ export const header = css`
   border-radius: 4px;
   font-size: 24px;
   background-color: #fff;
+
   > a {
     &:link {
       color: ${linkColor};
     }
+
     &:hover {
       color: ${activeColor};
     }

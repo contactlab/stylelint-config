@@ -16,6 +16,6 @@
     "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["index.ts", "prettier.ts", "styled.ts"],
+  "include": ["index.ts", "styled.ts"],
   "exclude": ["./node_modules"]
 }

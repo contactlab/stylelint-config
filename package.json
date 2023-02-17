@@ -14,37 +14,38 @@
   "homepage": "https://contactlab.github.io/stylelint-config",
   "bugs": "https://github.com/contactlab/stylelint-config/issues",
   "engines": {
-    "node": ">= 14",
-    "npm": ">= 6.13"
+    "node": ">= 16",
+    "npm": ">= 8"
   },
   "files": [
-    "{index,prettier,styled}.js",
+    "{index,styled}.js",
     "*.d.ts"
   ],
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
     "prepare": "husky install",
+    "cleanup": "rm -f *.d.ts index.js styled.js",
     "check": "tsc",
     "lint": "eslint . --ext .js,.ts",
     "pretest": "npm run lint && tsc --noEmit false",
     "test": "npm run test:css && npm run test:styled",
     "test:css": "stylelint ./test/styles.css --config ./test/.stylelintrc.css.json",
     "test:styled": "stylelint ./test/styles.js --config ./test/.stylelintrc.styled.json",
+    "prebuild": "npm run cleanup",
     "build": "tsc -p tsconfig.build.json",
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "@stylelint/postcss-css-in-js": "^0.38.0",
     "stylelint": "^15.0.0"
   },
   "dependencies": {
-    "postcss-syntax": "^0.36.2",
+    "postcss-styled-syntax": "^0.3.2",
+    "stylelint-config-standard": "^30.0.1",
     "stylelint-declaration-block-no-ignored-properties": "^2.7.0",
     "stylelint-order": "^6.0.2"
   },
   "devDependencies": {
-    "@stylelint/postcss-css-in-js": "^0.38.0",
     "@types/node": "^16.18.12",
     "eslint": "^8.34.0",
     "eslint-config-contactlab": "^9.0.0",
