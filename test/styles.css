@@ -20,7 +20,7 @@ input[type='text'] {
   color: #444;
   background-color: linear-gradient(
     var(--custom-property, #eee),
-    rgba(0 0 0 0.8)
+    rgb(0 0 0 / 0.8)
   );
 }
 
@@ -38,8 +38,8 @@ input[type='text'] {
 }
 
 .baz {
-  font-family: Inconsolata, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
-    monospace;
+  font-family:
+    Inconsolata, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
 .buz {
@@ -47,10 +47,10 @@ input[type='text'] {
 }
 
 /* Single-line comment */
-@media (orientation: portrait), projection and (color) {
+@media (orientation: portrait), screen and (color) {
   .foo + .bar {
-    font-family: custom-font-sans-serif, 'Lucida Grande', 'Segoe UI', Arial,
-      sans-serif;
+    font-family:
+      custom-font-sans-serif, 'Lucida Grande', 'Segoe UI', Arial, sans-serif;
     filter: brightness();
   }
 }
@@ -58,6 +58,7 @@ input[type='text'] {
 /*
  * Multi-line comment
  */
+/* stylelint-disable-next-line media-feature-range-notation */
 @media screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .fav {
     height: 8rem;
@@ -69,7 +70,10 @@ input[type='text'] {
       #fff 24px,
       rgb(255 255 255 / 0.8) 48px
     );
-    box-shadow: 0 1px 1px #444, 0 1px 0 #fff, 2px 2px 1px 1px #eee inset;
+    box-shadow:
+      0 1px 1px #444,
+      0 1px 0 #fff,
+      2px 2px 1px 1px #eee inset;
   }
 }
 
