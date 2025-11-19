@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.0.0](https://github.com/contactlab/stylelint-config/releases/tag/3.0.0)
+
+**Breaking changes:**
+
+- node support >= 20.x
+
 ## [2.0.0](https://github.com/contactlab/stylelint-config/releases/tag/2.0.0)
 
 **Breaking changes:**

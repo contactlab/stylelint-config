@@ -1,6 +1,6 @@
 {
   "name": "@contactlab/stylelint-config",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Contactlab Stylelint modular configuration - inspired by @giotramu/stylelint-config",
   "keywords": [
     "config",
