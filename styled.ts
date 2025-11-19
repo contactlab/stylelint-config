@@ -7,6 +7,7 @@ export = {
     'font-weight-notation': null,
     'function-url-quotes': null,
     'length-zero-no-unit': null,
+    'nesting-selector-no-missing-scoping-root': null,
     'no-empty-source': null,
     'number-max-precision': null,
     'property-no-unknown': [
